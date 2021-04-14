@@ -7,6 +7,12 @@
 }
 .col-2{
     background-color: white;
+    margin-right: auto;
+    margin-left: auto;
+
 }.col-2:hover{
-    background-color: blue;
+    transform: scale(1.06);
+}
+.row{
+    align-items: center;
 }
