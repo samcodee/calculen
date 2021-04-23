@@ -7,25 +7,24 @@
     <title>CALCULEN</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='calculator.css'>
-    <link rel="apple-touch-icon" sizes="180x180" href="https://samcodee.github.io/infopedia/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://samcodee.github.io/infopedia/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://samcodee.github.io/infopedia/favicon-16x16.png">
-    <link rel="manifest" href="https://samcodee.github.io/infopedia/site.webmanifest">
-    <link rel="icon" type="image/ico" sizes="16x16" href="https://samcodee.github.io/infopedia/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-    crossorigin="anonymous"></script>
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
     <link
-    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-    rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -37,22 +36,22 @@
             <div class="col-10">
                 <img src="Untitled.png" alt="the faster calculator" style="padding-left: 70px; padding-top: 60px;"
                     class="d-none d-md-block">
-                </div>
             </div>
         </div>
-        <div id="input-place">
-            <div class="container-fluid" style="padding-top: 10px;">
-                <input type="text" name="fnumber" id="fno" placeholder="Enter the first number to be operated"
+    </div>
+    <div id="input-place">
+        <div class="container-fluid" style="padding-top: 10px;">
+            <input type="text" name="fnumber" id="fno" placeholder="Enter the first number to be operated"
                 style="width: 100%;" maxlength="15">
-            </div>
-            <div class="container-fluid" style="padding-top: 10px;">
-                <input type="text" name="snumber" id="sno" placeholder="Enter the second number to be operated"
-                style="width: 100%;" maxlength="15">
-            </div>
-            <div class="container-fluid" style="padding-top: 10px;">
-                <p id="final"></p>
-            </div>
         </div>
+        <div class="container-fluid" style="padding-top: 10px;">
+            <input type="text" name="snumber" id="sno" placeholder="Enter the second number to be operated"
+                style="width: 100%;" maxlength="15">
+        </div>
+        <div class="container-fluid" style="padding-top: 10px;">
+            <p id="final"></p>
+        </div>
+    </div>
     <div class="col-centered">
         <div class="row">
             <div class="col-2">
@@ -62,14 +61,15 @@
                 <a onclick="subtract()"><img src="minus.png" alt="minus" style="cursor: pointer;"></a>
             </div>
             <div class="col-2">
-                <a onclick="mult()"><img src="multiplication.png" alt="multiplication" style="cursor: pointer;" height="201px"></a>
+                <a onclick="mult()"><img src="multiplication.png" alt="multiplication" style="cursor: pointer;"
+                        height="201px"></a>
             </div>
             <div class="col-2">
                 <a onclick="divi()"><img src="division.png" alt="division" style="cursor: pointer;"></a>
             </div>
         </div>
-        
-    </body>
-    <script src='calculator.js'></script>
-    
-    </html>
+
+</body>
+<script src='calculator.js'></script>
+
+</html>
