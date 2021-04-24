@@ -1,38 +1,20 @@
 var result;
-
-function addition() {
-    var fno = document.getElementById("fno").value;
-    var sno = document.getElementById("sno").value;
-    if (fno == "" || sno == "") {
-        console.error("no value given");
-        document.getElementById("final").innerHTML = "please enter a value";
-    }
-    else {
-        result = Number(fno) + Number(sno);
-        document.getElementById("final").innerHTML = result;
-        console.log(result);
-    }
-
+var operatorglobal;
+var one;
+var two;
+var third;
+var fourth;
+var fifth;
+function assignoperator(operator) {
+    operatorglobal = operator
+    one = Number(document.getElementById("one").value);
+    two = Number(document.getElementById("two").value);
+    third = Number(document.getElementById("third").value);
+    fourth = Number(document.getElementById("fourth").value);
+    fifth = Number(document.getElementById("fifth").value);
+    operate();
 }
-
-function subtract() {
-    var fno = document.getElementById("fno").value;
-    var sno = document.getElementById("sno").value;
-    result = Number(fno) - Number(sno)
-    document.getElementById("final").innerHTML = result;
+function operate() {
+    var operators = { '+': function (a, b, c, d, e) { return a + b + c + d + e }, '-': function (a, b, c, d, e) { return a - b - c - d - e }, '/': function (a, b, c, d, e) { return a / b / c / d / e }, '*': function (a, b, c, d, e) { return a * b * c * d * e}};
+    document.getElementById("final").innerHTML = operators[operatorglobal](one, two, third, fourth, fifth);
 }
-
-function mult() {
-    var fno = document.getElementById("fno").value;
-    var sno = document.getElementById("sno").value;
-    result = Number(fno) * Number(sno)
-    document.getElementById("final").innerHTML = result;
-}
-
-function divi() {
-    var fno = document.getElementById("fno").value;
-    var sno = document.getElementById("sno").value;
-    result = Number(fno) / Number(sno)
-    document.getElementById("final").innerHTML = result;
-}
-

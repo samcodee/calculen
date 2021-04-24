@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>CALCULEN</title>
+    <title>Infinity Calculator</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/calculator.css'>
     <link rel="apple-touch-icon" sizes="180x180" href="favicons/icons(favicons)/apple-touch-icon.png">
@@ -35,7 +35,7 @@
     <div class="container-fluid bg-primary">
         <div class="row">
             <div class="col-2">
-                <img src="img/logo.png" alt="logo of calculen">
+                <img src="img/logo.png">
             </div>
             <div class="col-10">
                 <img src="img/Untitled.png" alt="the faster calculator" style="padding-left: 70px; padding-top: 60px;"
@@ -45,13 +45,26 @@
     </div>
     <div id="input-place">
         <div class="container-fluid" style="padding-top: 10px;">
-            <input type="text" name="fnumber" id="fno" placeholder="Enter the first number to be operated"
+            <input type="text" name="fnumber" id="one" placeholder="Enter the first number to be operated"
                 style="width: 100%;" maxlength="15">
         </div>
         <div class="container-fluid" style="padding-top: 10px;">
-            <input type="text" name="snumber" id="sno" placeholder="Enter the second number to be operated"
+            <input type="text" name="snumber" id="two" placeholder="Enter the second number to be operated"
                 style="width: 100%;" maxlength="15">
         </div>
+        <div class="container-fluid" style="padding-top: 10px;">
+            <input type="text" name="snumber" id="third" placeholder="Enter the third number to be operated (Optional)"
+                style="width: 100%;" maxlength="15">
+        </div>
+        <div class="container-fluid" style="padding-top: 10px;">
+            <input type="text" name="snumber" id="fourth" placeholder="Enter the fourth number to be operated (Optional)"
+                style="width: 100%;" maxlength="15">
+        </div>
+        <div class="container-fluid" style="padding-top: 10px;">
+            <input type="text" name="snumber" id="fifth" placeholder="Enter the fifth number to be operated (Optional)"
+                style="width: 100%;" maxlength="15">
+        </div>
+
         <div class="container-fluid" style="padding-top: 10px;">
             <p id="final"></p>
         </div>
@@ -59,17 +72,17 @@
     <div class="col-centered">
         <div class="row">
             <div class="col-2">
-                <a onclick="addition()"><img src="img/plus.png" alt="plus" style="cursor: pointer;"></a>
+                <a onclick="assignoperator('+');"><img src="img/plus.png" alt="plus" style="cursor: pointer;"></a>
             </div>
             <div class="col-2">
-                <a onclick="subtract()"><img src="img/minus.png" alt="minus" style="cursor: pointer;"></a>
+                <a onclick="assignoperator('-');"><img src="img/minus.png" alt="minus" style="cursor: pointer;"></a>
             </div>
             <div class="col-2">
-                <a onclick="mult()"><img src="img/multiplication.png" alt="multiplication" style="cursor: pointer;"
-                        height="201px"></a>
+                <a onclick="assignoperator('*');"><img src="img/multiplication.png" alt="multiplication"
+                        style="cursor: pointer;" height="201px"></a>
             </div>
             <div class="col-2">
-                <a onclick="divi()"><img src="img/division.png" alt="division" style="cursor: pointer;"></a>
+                <a onclick="assignoperator('/');"><img src="img/division.png" alt="division" style="cursor: pointer;"></a>
             </div>
         </div>
 
