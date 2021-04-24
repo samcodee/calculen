@@ -5,13 +5,10 @@
 #main{
     text-align: center;
 }
-.col-2{
-    background-color: white;
+.col-1{
     margin-right: auto;
     margin-left: auto;
 
-}.col-2:hover{
-    transform: scale(1.07);
 }
 .row{
     align-items: center;

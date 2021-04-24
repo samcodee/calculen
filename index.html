@@ -57,8 +57,8 @@
                 style="width: 100%;" maxlength="15">
         </div>
         <div class="container-fluid" style="padding-top: 10px;">
-            <input type="text" name="snumber" id="fourth" placeholder="Enter the fourth number to be operated (Optional)"
-                style="width: 100%;" maxlength="15">
+            <input type="text" name="snumber" id="fourth"
+                placeholder="Enter the fourth number to be operated (Optional)" style="width: 100%;" maxlength="15">
         </div>
         <div class="container-fluid" style="padding-top: 10px;">
             <input type="text" name="snumber" id="fifth" placeholder="Enter the fifth number to be operated (Optional)"
@@ -69,20 +69,22 @@
             <p id="final"></p>
         </div>
     </div>
-    <div class="col-centered">
+    <div class="col-centered text-white">
         <div class="row">
-            <div class="col-2">
-                <a onclick="assignoperator('+');"><img src="img/plus.png" alt="plus" style="cursor: pointer;"></a>
+            <div class="col-1">
+                <a onclick="assignoperator('+');" class="btn btn-primary">+</a>
             </div>
-            <div class="col-2">
-                <a onclick="assignoperator('-');"><img src="img/minus.png" alt="minus" style="cursor: pointer;"></a>
+            <div class="col-1">
+                <a onclick="assignoperator('-');" class="btn btn-primary">–</a>
             </div>
-            <div class="col-2">
-                <a onclick="assignoperator('*');"><img src="img/multiplication.png" alt="multiplication"
-                        style="cursor: pointer;" height="201px"></a>
+            <div class="col-1">
+                <a onclick="assignoperator('*');" class="btn btn-primary">×</a>
             </div>
-            <div class="col-2">
-                <a onclick="assignoperator('/');"><img src="img/division.png" alt="division" style="cursor: pointer;"></a>
+            <div class="col-1">
+                <a onclick="assignoperator('/');" class="btn btn-primary">÷</a>
+            </div>
+            <div class="col-1">
+                <a onclick="clearfields();" class="btn btn-primary">Clear</a>
             </div>
         </div>
 
