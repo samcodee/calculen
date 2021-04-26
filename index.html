@@ -4,6 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Infinity Calculator</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/calculator.css'>
@@ -23,71 +24,86 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
         crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
     <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-        rel="stylesheet">
+    href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+    rel="stylesheet">
 </head>
 
-<body>
+<body style="overflow: hidden;" onkeydown="uniKeyCode(event);">
     <div class="container-fluid bg-primary">
         <div class="row">
             <div class="col-2">
                 <img src="img/logo.png">
             </div>
-            <div class="col-10">
-                <img src="img/Untitled.png" alt="the faster calculator" style="padding-left: 70px; padding-top: 60px;"
-                    class="d-none d-md-block">
-            </div>
         </div>
     </div>
     <div id="input-place">
-        <div class="container-fluid" style="padding-top: 10px;">
-            <input type="text" name="fnumber" id="one" placeholder="Enter the first number to be operated"
+        <!--  -->
+        <div class="row">
+            <div class="col-9 container-fluid" style="padding-top: 10px; margin-left:16px;">
+                <input type="text" id="search"
+                placeholder="Search for cheats... Search &#34;cheatslist&#34; for the list of cheats...."
                 style="width: 100%;" maxlength="15">
+            </div>
+            <div class="col-2 text-white" id="searchbtn" style="padding-top: 10px;">
+                <a onclick="showsearch();" class="btn btn-primary">Search</a>
+            </div>
+        </div>
+        <!-- -->
+        <div class="container-fluid" style="padding-top: 10px;">
+            <input type="text" id="one"
+            placeholder="Enter the first number to be operated"
+            style="width: 100%;" maxlength="15">
         </div>
         <div class="container-fluid" style="padding-top: 10px;">
-            <input type="text" name="snumber" id="two" placeholder="Enter the second number to be operated"
-                style="width: 100%;" maxlength="15">
+            <input type="text" id="two" placeholder="Enter the second number to be operated" style="width: 100%;"
+            maxlength="15">
+        </div>
+        <!-- <div class="container-fluid" style="padding-top: 10px;">
+            <input type="text" id="third"
+            placeholder="Enter the third number to be operated (Optional) Note: Do not fill this field for division"
+            style="width: 100%;" maxlength="15">
         </div>
         <div class="container-fluid" style="padding-top: 10px;">
-            <input type="text" name="snumber" id="third" placeholder="Enter the third number to be operated (Optional)"
-                style="width: 100%;" maxlength="15">
+            <input type="text" id="fourth"
+            placeholder="Enter the fourth number to be operated (Optional) Note: Do not fill this field for division"
+            style="width: 100%;" maxlength="15">
         </div>
         <div class="container-fluid" style="padding-top: 10px;">
-            <input type="text" name="snumber" id="fourth"
-                placeholder="Enter the fourth number to be operated (Optional)" style="width: 100%;" maxlength="15">
-        </div>
-        <div class="container-fluid" style="padding-top: 10px;">
-            <input type="text" name="snumber" id="fifth" placeholder="Enter the fifth number to be operated (Optional)"
-                style="width: 100%;" maxlength="15">
-        </div>
+            <input type="text" id="fifth"
+            placeholder="Enter the fifth number to be operated (Optional) Note: Do not fill this field for division"
+            style="width: 100%;" maxlength="15">
+        </div> -->
 
         <div class="container-fluid" style="padding-top: 10px;">
             <p id="final"></p>
         </div>
-    </div>
-    <div class="col-centered text-white">
-        <div class="row">
-            <div class="col-1">
-                <a onclick="assignoperator('+');" class="btn btn-primary">+</a>
-            </div>
-            <div class="col-1">
-                <a onclick="assignoperator('-');" class="btn btn-primary">–</a>
-            </div>
-            <div class="col-1">
-                <a onclick="assignoperator('*');" class="btn btn-primary">×</a>
-            </div>
-            <div class="col-1">
-                <a onclick="assignoperator('/');" class="btn btn-primary">÷</a>
-            </div>
-            <div class="col-1">
-                <a onclick="clearfields();" class="btn btn-primary">Clear</a>
-            </div>
         </div>
-
+        <div class="col-centered text-white">
+            <div class="row">
+                <div class="col-1" style="padding-top: 10px;">
+                    <a onclick="assignoperator('+');" class="btn btn-primary">+</a>
+                </div>
+                <div class="col-1" style="padding-top: 10px;">
+                    <a onclick="assignoperator('-');" class="btn btn-primary">–</a>
+                </div>
+                <div class="col-1" style="padding-top: 10px;">
+                    <a onclick="assignoperator('*');" class="btn btn-primary">×</a>
+                </div>
+                <div class="col-1" style="padding-top: 10px;">
+                    <a onclick="assignoperator('/');" class="btn btn-primary">÷</a>
+                </div>
+                <div class="col-1" style="padding-top: 10px;">
+                    <a onclick="clearfields();" class="btn btn-primary">Clear</a>
+                </div>
+                <!-- <div class="col-2" style="padding-top: 10px;">
+                    <a onclick="showsearch();" class="btn btn-primary">Toggle Cheats</a>
+                </div> -->
+            </div>
+            
 </body>
 <script src='js/calculator.js'></script>
 
