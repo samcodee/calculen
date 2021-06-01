@@ -1,0 +1,1 @@
+This Folder is just like a draft folder to simply test and experiment things. This is not use in the mainstream app.
